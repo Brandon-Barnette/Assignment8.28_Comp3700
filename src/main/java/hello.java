@@ -1,5 +1,7 @@
 public class hello {
+
     public static class Finder {
+
         public static int findMax(int[] intArray) {
             int result = 0;
             for (int i = 0; i < intArray.length; i++) {
