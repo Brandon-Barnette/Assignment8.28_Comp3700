@@ -1,8 +1,11 @@
-public class hello {
+import static java.lang.System.*;
 
-    public static class Finder {
+public class Finder {
 
-        public static int findMax(int[] intArray) {
+    public static int findMax(int[] intArray) {
+        if (intArray == null || intArray.length == 0) {
+            return -1;
+        } else {
             int result = intArray[0];
             for (int i = 0; i < intArray.length; i++) {
                 if (intArray[i] > result) {
@@ -11,8 +14,12 @@ public class hello {
             }
             return result;
         }
+    }
 
-        public static int findMin(int[] intArray) {
+    public static int findMin(int[] intArray) {
+        if (intArray == null || intArray.length == 0) {
+            return -1;
+        } else {
             int result = intArray[0];
             for (int i = 0; i < intArray.length; i++) {
                 if (intArray[i] < result) {
@@ -23,14 +30,14 @@ public class hello {
         }
     }
 
-    /*
+
     public static void main(String[] args) {
         Finder finder = new Finder();
         int[] arr = {1, 2, 3, 4, 5, 6};
         int result = finder.findMax(arr);
         int smallResult = finder.findMin(arr);
-        System.out.println(result);
-        System.out.println(smallResult);
+        out.println(result);
+        out.println(smallResult);
     }
-     */
+
 }
